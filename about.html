@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About – UZ Food Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        .review-section {
+            margin-top: 40px;
+        }
+
+        .review-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .review-sub {
+            font-size: 13px;
+            color: var(--text-soft);
+            margin-bottom: 16px;
+        }
+
+        .review-box {
+            background: var(--bg-soft);
+            border: 1px solid var(--border-soft);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-soft);
+        }
+
+        .review-name {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 500;
+        }
+        .brand-logo img {
+    width: 48px;
+    /* Adjust size */
+    height: 48px;
+    /* Keep it square */
+    object-fit: contain;
+    /* Prevent stretching */
+    border-radius: 8px;
+    /* Optional: smooth edges */
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+            <div class="brand-logo"><img src="logo.png" alt=""></div>
+                <div>
+                    <div class="brand-text-main">UZ Food Cafe</div>
+                    <div class="brand-text-sub">Fresh Food • Good Vibes</div>
+                </div>
+            </div>
+
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+           
+                <a href="contact.html">Contact</a>
+                <button class="nav-cta" onclick="window.location.href='contact.html'">
+                    <span class="icon">📍</span> Visit Our Cafe
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-eyebrow">About UZ Food Cafe</div>
+            <h1 class="page-title">Street Taste, Cafe Comfort.</h1>
+            <p class="page-subtitle">
+                UZ Food Cafe was created for people who love the bold taste of street food
+                but also want a clean, relaxing place to sit, talk and enjoy their time.
+            </p>
+        </section>
+
+        <section class="about-layout">
+            <article class="card-soft">
+                <p class="about-text">
+                    At UZ Food Cafe, the idea is very simple – bring the real Indian street-food
+                    vibe into a cafe where you can sit for hours. The menu combines favourites
+                    like pizza, burgers, Chinese dishes, fries, mocktails and more.
+                </p>
+                <p class="about-text">
+                    Whether you are a student looking for a hangout spot, a group of friends
+                    chilling after college, a family out for snacks, or someone taking a break
+                    from work – the cafe is designed to feel welcoming and relaxed.
+                </p>
+
+                <ul class="about-list">
+                    <li>Street-style snacks with a modern twist</li>
+                    <li>Calm indoor seating with music</li>
+                    <li>Great for small celebrations & groups</li>
+                    <li>Easy to locate on Main Road, Sillod</li>
+                </ul>
+            </article>
+
+            <aside class="card-soft">
+                <h2 class="section-title">Cafe Snapshot</h2>
+                <p class="section-sub">A quick look at what defines UZ Food Cafe.</p>
+                <div style="margin-top:14px;font-size:13px;color:var(--text-soft);display:grid;gap:8px;">
+                    <div><strong>Cuisine:</strong> Pizza, Burgers, Chinese, Fries, Mocktails & more</div>
+                    <div><strong>Ambience:</strong> Chill, casual and friendly</div>
+                    <div><strong>Best For:</strong> Friends, families, small meetups</div>
+                    <div><strong>Location:</strong> Near Jio Office, Main Road, Sillod, Aurangabad</div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- ⭐ CUSTOMER REVIEW SECTION ⭐ -->
+        <section class="review-section">
+            <h2 class="review-title">What Our Customers Say</h2>
+            <p class="review-sub">Real experiences from guests who visited UZ Food Cafe.</p>
+
+            <!-- Review 1 -->
+            <div class="review-box">
+                This place is great! Atmosphere is chill and cool but the staff is also really friendly.
+                They know what they’re doing and what they’re talking about, and you can tell making
+                the customers happy is their main priority. Food is pretty good, some Italian classics
+                and some twists, and for their prices it’s 100% worth it.
+                <div class="review-name">— Ritesh Pawar</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-box">
+                It’s a great experience. The ambiance is very welcoming and charming. Amazing wines,
+                food and service. Staff are extremely knowledgeable and make great recommendations.
+                <div class="review-name">— Shaikh Ahsaan</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>© <span id="year"></span> UZ Food Cafe. All rights reserved.</div>
+            <div class="footer-links">
+                <span>Designed & Developed by <a href="https://aniketwebdev.netlify.app/">aniketwebdev</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

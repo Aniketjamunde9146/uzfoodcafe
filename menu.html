@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu – UZ Food Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MAIN STYLE -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- SWIPER CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    body {
+      background: #111;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      color: #ffdd57;
+      margin: 30px 0;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Slider Container */
+    .swiper {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 0 auto 50px auto;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      cursor: zoom-in;
+      transition: 0.3s ease;
+    }
+
+    /* Lightbox (fullscreen zoom) */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s ease;
+      z-index: 9999;
+    }
+
+    .lightbox.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox img {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 10000;
+    }
+    .brand-logo img {
+    width: 48px;
+    /* Adjust size */
+    height: 48px;
+    /* Keep it square */
+    object-fit: contain;
+    /* Prevent stretching */
+    border-radius: 8px;
+    /* Optional: smooth edges */
+    display: block;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+            <div class="brand-logo"><img src="logo.png" alt=""></div>
+      <div>
+        <div class="brand-text-main">UZ Food Cafe</div>
+        <div class="brand-text-sub">Fresh Food • Good Vibes</div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Gallery</a>
+  
+      <a href="contact.html">Contact</a>
+      <button class="nav-cta" onclick="window.location.href='contact.html'">
+        <span class="icon">📍</span> Visit Us
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- TITLE -->
+<h1 class="page-title">Our Menu</h1>
+
+<!-- ⭐ SWIPER SLIDER ⭐ -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <!-- MENU IMAGES -->
+    <div class="swiper-slide">
+      <img src="menu1.png" class="menu-img" alt="Menu 1">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu2.png" class="menu-img" alt="Menu 2">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu3.png" class="menu-img" alt="Menu 3">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu4.png" class="menu-img" alt="Menu 4">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu5.png" class="menu-img" alt="Menu 5">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu6.png" class="menu-img" alt="Menu 6">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu7.png" class="menu-img" alt="Menu 7">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu8.png" class="menu-img" alt="Menu 8">
+    </div>
+
+    <div class="swiper-slide">
+      <img src="menu9.png" class="menu-img" alt="Menu 9">
+    </div>
+
+  </div>
+
+  <!-- Swiper buttons -->
+  <div class="swiper-button-next" style="color:#fff;"></div>
+  <div class="swiper-button-prev" style="color:#fff;"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- ⭐ LIGHTBOX ZOOM VIEWER ⭐ -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> UZ Food Cafe. All rights reserved.</div>
+    <span>Designed & Developed by <a href="https://aniketwebdev.netlify.app/">aniketwebdev</a></span>
+  </div>
+</footer>
+
+<!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* Swiper Slider */
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  /* Image Zoom (Lightbox) */
+  const images = document.querySelectorAll('.menu-img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.onclick = () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+    }
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+  }
+
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) closeLightbox();
+  };
+</script>
+
+</body>
+</html

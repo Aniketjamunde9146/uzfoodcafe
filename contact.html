@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – UZ Food Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+            <div class="brand-logo"><img src="logo.png" alt=""></div>
+                <div>
+                    <div class="brand-text-main">UZ Food Cafe</div>
+                    <div class="brand-text-sub">Fresh Food • Good Vibes</div>
+                </div>
+            </div>
+
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html" class="active">Contact</a>
+                <button class="nav-cta">
+                    <span class="icon">📞</span> Call / Visit
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-eyebrow">Contact & Location</div>
+            <h1 class="page-title">Visit UZ Food Cafe in Sillod.</h1>
+            <p class="page-subtitle">
+                Here are our official contact details, working hours, and exact map location.
+            </p>
+        </section>
+
+        <section class="contact-grid">
+            <article class="card-soft">
+
+                <div class="contact-label">Email</div>
+                <div class="contact-value">uzfoodcafe01@gmail.com</div>
+
+                <br>
+
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">9067778605</div>
+
+                <br>
+
+                <div class="contact-label">Address</div>
+                <div class="contact-value">
+                    UZ Food Cafe,<br>
+                    7MW2+85X, Johar Colony,<br>
+                    Near Johar School,<br>
+                    Sillod, Maharashtra 431112
+                </div>
+
+                <br>
+
+                <div class="contact-label">Hours of Operation</div>
+
+                <div class="hours-grid">
+                    <div class="hour-item"><strong>Mon</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Tues</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Wed</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Thu</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Fri</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Sat</strong><br>10:30 AM – 11:30 PM</div>
+                    <div class="hour-item"><strong>Sun</strong><br>10:30 AM – 11:30 PM</div>
+                </div>
+
+            </article>
+
+            <!-- ⭐ MAP SECTION WITH CORRECT LOCATION ⭐ -->
+            <!-- ⭐ MAP SECTION WITH CORRECT LOCATION ⭐ -->
+            <aside class="map-card">
+            
+                <!-- Google Map -->
+                <iframe class="map-iframe" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d622.2740000000001!2d75.6512077!3d20.295508!2m3!1f80!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba54ee56b9e4f%3A0x6281d989cd3530d8!2sJohar%20Colony%2C%20Near%20Johar%20School%2C%20Sillod%2C%20Maharashtra%20431112!5e0!3m2!1sen!2sin!4v1702176000000!5m2!1sen!2sin">
+                </iframe>
+            
+                <!-- Buttons -->
+                <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
+            
+                    <!-- Start Navigation Button -->
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=7MW2+85X,+Johar+Colony,+near+Johar+School,+Sillod"
+                        target="_blank" class="btn-primary" style="text-decoration:none;">
+                        🚗 Start Navigation
+                    </a>
+            
+                    <!-- Full Map Button -->
+                    <a href="https://www.google.com/maps/search/7MW2+85X,+Johar+Colony,+near+Johar+School,+Sillod,+Maharashtra+431112,+India/"
+                        target="_blank" class="btn-outline" style="text-decoration:none;">
+                        🗺️ See Full Map
+                    </a>
+                </div>
+            
+                <div class="map-note" style="margin-top:10px;">
+                    This map shows the exact UZ Food Cafe location in Sillod.
+                </div>
+            
+            </aside>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>© <span id="year"></span> UZ Food Cafe. All rights reserved.</div>
+            <div class="footer-links">
+                <span>Designed & Developed by
+                    <a href="https://aniketwebdev.netlify.app/" target="_blank">aniketwebdev</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

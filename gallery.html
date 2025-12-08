@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery – UZ Food Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #111;
+        }
+
+        .gallery-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 32px;
+            color: #ffdd57;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .brand-logo img {
+    width: 48px;
+    /* Adjust size */
+    height: 48px;
+    /* Keep it square */
+    object-fit: contain;
+    /* Prevent stretching */
+    border-radius: 8px;
+    /* Optional: smooth edges */
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+            <div class="brand-logo"><img src="logo.png" alt=""></div>
+                <div>
+                    <div class="brand-text-main">UZ Food Cafe</div>
+                    <div class="brand-text-sub">Fresh Food • Good Vibes</div>
+                </div>
+            </div>
+
+            <button class="nav-toggle" onclick="toggleNav()">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html" class="active">Gallery</a>
+         
+                <a href="contact.html">Contact</a>
+                <button class="nav-cta" onclick="window.location.href='contact.html'">
+                    <span class="icon">📍</span> Visit Our Cafe
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Gallery</h1>
+
+        <div class="gallery-wrapper">
+            <img src="cafe_image.png" alt="UZ Food Cafe" class="gallery-img">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>© <span id="year"></span> UZ Food Cafe. All rights reserved.</div>
+            <div class="footer-links">
+                <span>Designed & Developed by <a href="https://aniketwebdev.netlify.app/">aniketwebdev</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
